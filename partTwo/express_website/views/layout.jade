@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Express Website
+    title #{title}: Express Website
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible',content='IE=edge')
     meta(name='viewport', content='width=device-width', initial-scale=1.0)
@@ -19,13 +19,15 @@ html
           a.navbar-brand(href='#') Express Website
         #navbar.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
-            li(class=(title === 'Home' ? 'active': ''))
+            li(class=(title === 'HOME' ? 'active': ''))
               a(href='/') HOME
-            li(class=(title === 'About' ? 'active' : ''))
+            li(class=(title === 'ABOUT' ? 'active' : ''))
               a(href='/about') ABOUT
-            li(class=(title === 'Contact' ? 'active' : ''))
+            li(class=(title === 'CONTACT' ? 'active' : ''))
               a(href='/contact') CONTACT
     block content
+    footer
+      p &copy; 2017, All Rights Reserved
 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
